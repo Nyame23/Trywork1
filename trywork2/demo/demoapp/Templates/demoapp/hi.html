@@ -1,0 +1,342 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Homepage</title>
+
+    <link href="{% static 'website/img/favicon.ico' %}" rel="icon">
+    <link rel="stylesheet" href="{% static 'demoapp/css/hi.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+
+
+#welcome-section {
+    background-image: url("{% static 'demoapp/images/hoteoutdoor.png' %}");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#welcome-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+
+    /* Remove text background */
+    background: none;
+}
+
+#welcome-section p {
+    font-size: 18px;
+
+    /* Remove text background */
+    background: none;
+}
+#enjoy {
+    background-image: url("{% static 'demoapp/images/outdoor2.png' %}");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+
+
+  </style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img class="nav-img" src="{% static 'demoapp/images/crown2-removebg-preview.png' %}" alt="Hotel Logo">
+    <a class="navbar-brand" href="#">CROWN HOTEL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 fs-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about-section">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'hi' %}">
+            <button class="btn btn-primary">Book Now</button>
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- New Welcome Section -->
+<div id="welcome-section">
+    <h1>Hello There!</h1>
+    <p>Welcome to our hotel. We hope you have a pleasant stay.</p>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card-group">
+        <a href="#" class="card card-link">
+          <img src="{% static 'demoapp/images/hotelroom1.png' %}" class="card-img-top" alt="Presidential Room">
+          <div class="card-body">
+            <h5 class="card-title">Presidential Room</h5>
+            <p class="card-text">Spacious and luxurious, perfect for a VIP experience.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Starting from $299/night</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+      <div class="card-group">
+        <a href="#" class="card card-link">
+          <img src="{% static 'demoapp/images/hotelroom3.png' %}" class="card-img-top" alt="Luxury Room">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Room</h5>
+            <p class="card-text">Elegance and comfort combined for a delightful stay.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Starting from $199/night</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card-group">
+        <a href="#" class="card card-link">
+          <img src="{% static 'demoapp/images/hotelroom2.png' %}" class="card-img-top" alt="Standard Room">
+          <div class="card-body">
+            <h5 class="card-title">Standard Room</h5>
+            <p class="card-text">A comfortable choice for a pleasant and budget-friendly stay.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Starting from $99/night</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--<section class="featured">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-ride="carousel" data-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'demoapp/images/hotelroom2.png' %}" class="d-block w-100" alt="Room 1">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'demoapp/images/hotelroom1.png' %}" class="d-block w-100" alt="Room 2">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'demoapp/images/hotelroom3.png' %}" class="d-block w-100" alt="Room 3">
+        </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleAutoplaying" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleAutoplaying" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>   -->
+
+  <!-- Footer Section -->
+
+
+<!-- Review Carousel -->
+<div id="reviewCarousel" class="carousel slide review-carousel" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="review-card">
+                <div class="card-body">
+                    <p class="card-text">"Great experience at Crown Hotel. The staff was friendly and the rooms were luxurious!"</p>
+                    <p class="author">- John Doe</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="review-card">
+                <div class="card-body">
+                    <p class="card-text">"Fantastic service and a comfortable stay. Will definitely come back!"</p>
+                    <p class="author">- Jane Smith</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#reviewCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#reviewCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+<div id="enjoy">
+    <div class="col-md-8">
+      <div class="text-left">
+        <h2>Experience Luxury at Crown Hotel</h2>
+        <p>Indulge in the opulence of our carefully curated rooms. Each room is designed to provide a unique and unforgettable experience for our guests. From spacious Presidential Rooms to elegant Luxury Rooms and comfortable Standard Rooms, we offer a range of options to suit your preferences and budget.</p>
+        <p>Book your stay with us now and enjoy world-class amenities, exceptional service, and an atmosphere of luxury that will make your visit truly memorable.</p>
+      </div>
+    </div>
+
+</div>
+
+
+
+<section id="about-section">
+    <div class="container">
+        <h2>About Crown Hotel</h2>
+        <p>Welcome to Crown Hotel, where luxury meets comfort. Nestled in the heart of the city, our hotel offers a unique blend of elegance and modern amenities. Whether you are here for business or leisure, we strive to make your stay memorable.</p>
+        <p>At Crown Hotel, we take pride in our spacious and meticulously designed rooms, each tailored to provide a tranquil and relaxing environment. Our dedicated staff is committed to ensuring your needs are met with the highest level of hospitality.</p>
+        <p>Indulge in our world-class facilities, savor exquisite cuisine at our fine dining restaurants, and experience the warmth of our hospitality. Your satisfaction is our priority, and we look forward to making your stay with us truly exceptional.</p>
+    </div>
+</section>
+
+
+
+
+<div class="container" id="footer">
+  <footer class="py-3 my-4">
+
+
+
+<div class="container">
+    <div class="row">
+        <!-- Hotel Service Table -->
+        <div class="col-md-6 text-left">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="2">Hotel Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Welcome to our hotel! <br>We are dedicated to <br>providing
+                            you with an <br>exceptional
+                            and memorable stay. <br>
+                    Our team is committed to <br>ensuring your comfort and <br>
+                            satisfaction <br>throughout your time with us.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Any Questions Table -->
+        <div class="col-md-6">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th colspan="2">Any Questions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" class="nav-link1 px-2 text-body-secondary">
+                        <i class="fas fa-map-marker-alt"></i> St.peter street 12, Accra
+                    </a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="nav-link1 px-2 text-body-secondary">
+                        <i class="fas fa-phone"></i> +1(123)456-7890
+                    </a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="nav-link1 px-2 text-body-secondary">
+                        <i class="far fa-envelope"></i> info@crownhotel.com
+                    </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<p>
+
+
+</p>
+
+      <br>
+
+      <br>
+      <p class="phone-number">For inquiries, call us at: +1 (123) 456-7890</p>
+    <p>&copy; 2024 CROWN HOTEL. All rights reserved.</p>
+
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3 fs-1">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fab fa-facebook"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fab fa-instagram"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fab fa-whatsapp"></i></a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+
+
+
+  </footer>
+</div>
+
+
+
+
+
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

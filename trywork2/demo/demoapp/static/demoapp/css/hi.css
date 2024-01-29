@@ -1,0 +1,401 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #fff; /* Set a white background color */
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 1rem auto; /* Center the container */
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #1e1e1e;
+  padding: 5px 0; /* Adjust the padding to reduce height */
+  height: 50px;
+}
+
+.nav-img {
+  width: 60px; /* Adjust the width of the logo */
+  height: auto; /* Maintain the aspect ratio */
+}
+.navbar-brand {
+  color: #8d7735ed;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.navbar-brand:hover{
+  color: #fff;
+}
+
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-nav {
+  text-align: center;
+  margin-left: auto;
+}
+
+
+.nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0 2px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin-right: 10px;
+}
+
+.nav-link:hover {
+  color: #8d7735ed;
+}
+
+/* Header Styles */
+#welcome-section {
+  background-image: url("{% static 'demoapp/images/hotelroom1.png' %}");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+/* Featured Section Styles */
+.featured {
+  margin: 20px 0;
+}
+
+.carousel-inner img {
+  width: 70%;
+  height: 100%;
+}
+
+/* Footer Styles */
+#footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+
+  header {
+    padding: 10px 0;
+  }
+}
+
+/* Add this CSS to your stylesheet */
+.carousel-caption {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent black background */
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  color: rgba(255, 255, 255, 0.8); /* Set text color to semi-transparent white */
+  margin: 0; /* Remove default margin for h5 and p elements */
+}
+
+.navbar-nav .nav-link.book-now {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.navbar-nav .nav-link.book-now:hover {
+  background-color: #0056b3;
+}
+
+/* Your existing CSS goes here */
+
+.card {
+    width: 200px; /* Adjust the width of the cards */
+    height: 300px; /* Adjust the height of the cards */
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 250px; /* Adjust the height of the card images */
+    object-fit: cover;
+}
+
+.card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: left; /* Align text to the left */
+    transition: opacity 0.3s ease-in-out; /* Add opacity transition */
+}
+
+.card:hover .card-body {
+    opacity: 0; /* Set opacity to 0 on hover */
+}
+
+.card-body h5 {
+    color: #8d7735ed;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: none;
+}
+
+.card-body p {
+    color: #8d7735ed;
+    font-size: 1rem;
+}
+
+.card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    border-top: none;
+}
+
+.text-body-secondary {
+    color: #6c757d;
+    font-size: 0.75rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.col-md-4 {
+    flex: 0 0 30%; /* Make the columns smaller */
+    max-width: 30%; /* Limit the maximum width */
+}
+
+.text-left {
+    text-align: right; /* Align text to the right */
+}
+
+/* Optional: Add media queries for responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
+
+
+/* Your existing styles */
+
+        .review-carousel {
+            margin-top: 30px;
+        }
+
+        .review-card {
+            width: 200px;
+            height: 120px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+        }
+
+        .review-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .review-card .card-body {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #007bff;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+
+
+
+         /* About Section Styles */
+        #about-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #about-section h2 {
+            color: #8d7735ed;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        #about-section p {
+            color: #495057;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Optional: Adjust styles for responsiveness */
+        @media (max-width: 768px) {
+            #about-section {
+                padding: 30px 0;
+            }
+
+            #about-section h2 {
+                font-size: 2rem;
+            }
+
+            #about-section p {
+                font-size: 1rem;
+            }
+        }
+
+
+
+
+
+
+
+/* Add or update the following CSS to your stylesheet */
+
+/* Horizontal footer table */
+.container table {
+    display: flex;
+    flex-direction: column; /* Display the table in a vertical form */
+}
+
+/* Footer table styles */
+.container table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Remove border and background from table header */
+.container table thead th {
+    border: none;
+    background-color: transparent;
+}
+
+/* Remove border from table cells */
+.container table tbody td {
+    border: none;
+}
+
+/* Adjust padding and font size */
+.container table td,
+.container table th {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Adjust the footer padding and font size */
+#footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+
+
+.phone-number {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.nav {
+    margin-top: 20px;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #8d7735ed;
+}
+}
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+    .container table {
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+
+.nav-link1 {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link1:hover {
+    color: #8d7735ed;
+}
+}
